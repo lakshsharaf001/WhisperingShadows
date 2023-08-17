@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{8D973A07-080F-77B1-2723-20B7C3D2CF3F}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerMotor.cs">
+    <Files>
+      <File FileName="Assets/Scripts/InputManager.cs" Line="17" Column="38" />
+      <File FileName="Assets/Scripts/PlayerLook.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerMotor.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WhisperingShadows" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="PlayerMotor.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="d54de550-51cb-49ee-ad4f-7476bd272576" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
