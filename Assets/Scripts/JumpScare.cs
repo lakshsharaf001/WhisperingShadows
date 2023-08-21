@@ -6,21 +6,28 @@ public class JumpScare : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public GameObject JumpScareImg;
+    public GameObject JumpScareImg1;
     public AudioSource audioSource;
+
+    private bool isPlayed = false;
 
     void Start()
     {
-        JumpScareImg.SetActive(false);
+        JumpScareImg1.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
         {
-            JumpScareImg.SetActive(true);
-            audioSource.Play();
-            StartCoroutine(DisableImg());
+            if(!isPlayed)
+            {
+                JumpScareImg1.SetActive(true);
+                audioSource.Play();
+                StartCoroutine(DisableImg());
+
+                isPlayed = true;
+            }           
         }
     }
 
@@ -28,12 +35,7 @@ public class JumpScare : MonoBehaviour
     IEnumerator DisableImg()
     {
         yield return new WaitForSeconds(2);
-        JumpScareImg.SetActive(false);
+        JumpScareImg1.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
