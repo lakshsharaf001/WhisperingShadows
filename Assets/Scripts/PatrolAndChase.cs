@@ -3,78 +3,86 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
-public class MonsterMovement : MonoBehaviour
+public class PatrolAndChase : MonoBehaviour
 {
-    public Transform[] waypoints;
-    public Transform player;
-    public float chaseDistance = 10f;
-    public string gameOverScene = "GameOver";
-    public float waypointMoveSpeed = 3f; // Movement speed while patrolling waypoints
-    public float chaseMoveSpeed = 6f;    // Movement speed while chasing the player
-    private int currentWaypointIndex = 0;
-    private NavMeshAgent agent;
+    public Transform[] patrolPoints;
+    public float patrolSpeed = 3f;
+    public float chaseSpeed = 6f;
+    public float detectionRadius = 10f;
+    public Transform playerTransform; // Reference to the player's transform
 
-    private enum MonsterState { Waypoint, Chase }
-    private MonsterState currentState = MonsterState.Waypoint;
+    private NavMeshAgent navMeshAgent;
+    private int currentPatrolIndex = 0;
+    private bool isChasing = false;
 
-    void Start()
+    private void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
-        agent.speed = waypointMoveSpeed; // Set the initial movement speed
-        MoveToRandomWaypoint();
+        navMeshAgent = GetComponent<NavMeshAgent>();
+
+        // Start patrolling
+        StartPatrol();
     }
 
-    void Update()
+    private void Update()
     {
-        if (!agent.pathPending && agent.remainingDistance < 0.5f)
+        if (!isChasing)
         {
-            if (currentState == MonsterState.Waypoint)
-            {
-                MoveToRandomWaypoint();
-            }
-            else if (currentState == MonsterState.Chase)
-            {
-                ChasePlayer();
-            }
-        }
-
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        if (distanceToPlayer < chaseDistance)
-        {
-            currentState = MonsterState.Chase;
-            agent.speed = chaseMoveSpeed; // Change to chase movement speed
+            Patrol();
+            CheckForPlayer();
         }
         else
         {
-            currentState = MonsterState.Waypoint;
-            agent.speed = waypointMoveSpeed; // Change to waypoint movement speed
+            ChasePlayer();
         }
     }
 
-    void MoveToRandomWaypoint()
+    private void StartPatrol()
     {
-        if (waypoints.Length == 0)
+        navMeshAgent.speed = patrolSpeed;
+        navMeshAgent.destination = patrolPoints[currentPatrolIndex].position;
+    }
+
+    private void Patrol()
+    {
+        if (!navMeshAgent.pathPending && navMeshAgent.remainingDistance < 0.5f)
         {
-            Debug.LogWarning("No waypoints assigned.");
-            return;
+            currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length;
+            navMeshAgent.destination = patrolPoints[currentPatrolIndex].position;
         }
-
-        int randomIndex = Random.Range(0, waypoints.Length);
-        currentWaypointIndex = randomIndex;
-        agent.SetDestination(waypoints[currentWaypointIndex].position);
     }
 
-    void ChasePlayer()
+    private void CheckForPlayer()
     {
-        agent.SetDestination(player.position);
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
+        if (playerTransform != null && Vector3.Distance(transform.position, playerTransform.position) <= detectionRadius)
         {
-            SceneManager.LoadScene(gameOverScene);
+            Debug.Log("Player detected, starting chase.");
+            isChasing = true;
+            navMeshAgent.speed = chaseSpeed;
+        }
+    }
+
+    private void ChasePlayer()
+    {
+        if (playerTransform != null)
+        {
+            navMeshAgent.destination = playerTransform.position;
+
+            if (Vector3.Distance(transform.position, playerTransform.position) < 1f)
+            {
+                Debug.Log("Player caught, loading GameOver scene.");
+                SceneManager.LoadScene("GameOver");
+            }
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
 
