@@ -67,7 +67,7 @@ public class PatrolAndChase : MonoBehaviour
         {
             navMeshAgent.destination = playerTransform.position;
 
-            if (Vector3.Distance(transform.position, playerTransform.position) < 1f)
+            if (Vector3.Distance(transform.position, playerTransform.position) < 1.0f)
             {
                 Debug.Log("Player caught, loading GameOver scene.");
                 SceneManager.LoadScene("GameOver");
