@@ -5078,8 +5078,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffc07073884a44488af29be8b1977ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderers: []
-  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &313292730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8531,7 +8529,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 20, y: 0}
+  m_AnchoredPosition: {x: 20, y: -120}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &620380911
@@ -10119,8 +10117,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffc07073884a44488af29be8b1977ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderers: []
-  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &733022104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12101,8 +12097,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffc07073884a44488af29be8b1977ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderers: []
-  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &892821775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18466,8 +18460,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffc07073884a44488af29be8b1977ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderers: []
-  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1316093368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19105,8 +19097,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffc07073884a44488af29be8b1977ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderers: []
-  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1339794817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19271,8 +19261,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffc07073884a44488af29be8b1977ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderers: []
-  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1353248509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19560,7 +19548,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 23, y: 0}
+  m_AnchoredPosition: {x: 23, y: -20}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1362394805
@@ -21666,8 +21654,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffc07073884a44488af29be8b1977ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderers: []
-  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1482118808
 GameObject:
   m_ObjectHideFlags: 0
@@ -25745,8 +25731,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffc07073884a44488af29be8b1977ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderers: []
-  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1792268465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29093,7 +29077,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 130, y: 0}
+  m_AnchoredPosition: {x: 130, y: -40}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1912163549
@@ -29143,13 +29127,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -29680,8 +29664,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffc07073884a44488af29be8b1977ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderers: []
-  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1939526158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31638,13 +31620,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -31705,7 +31687,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 130, y: 0}
+  m_AnchoredPosition: {x: 130, y: -120}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!4 &2057711511 stripped
@@ -32135,8 +32117,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffc07073884a44488af29be8b1977ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderers: []
-  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &2085010046
 MonoBehaviour:
   m_ObjectHideFlags: 0
