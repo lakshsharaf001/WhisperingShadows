@@ -1,8 +1,8 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(AudioSource))] // Ensure AudioSource component is present
 public class PatrolAndChase : MonoBehaviour
 {
     public Transform[] patrolPoints;
@@ -10,47 +10,46 @@ public class PatrolAndChase : MonoBehaviour
     public float chaseSpeed = 15.0f;
     public float detectionRadius = 10f;
     public Transform playerTransform; // Reference to the player's transform
-    public Animator monsterMove;
+
+    public AudioSource audioSource; // Reference to the AudioSource component
 
     private NavMeshAgent navMeshAgent;
-    private int currentPatrolIndex = 0;
     private bool isChasing = false;
 
     private void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        audioSource = GetComponent<AudioSource>(); // Assign the AudioSource component
 
         // Start patrolling
         StartPatrol();
-        monsterMove.SetTrigger("Walk");
     }
 
     private void Update()
     {
         if (!isChasing)
         {
-            Patrol();
             CheckForPlayer();
         }
         else
         {
             ChasePlayer();
         }
+
+        // Calculate distance between monster and player
+        float distanceToPlayer = Vector3.Distance(transform.position, playerTransform.position);
+
+        // Adjust audio volume based on distance
+        float maxDistance = detectionRadius * 2.0f; // Adjust as needed
+        float volume = Mathf.Lerp(0.0f, 1.0f, 1.0f - (distanceToPlayer / maxDistance));
+        audioSource.volume = volume;
     }
 
     private void StartPatrol()
     {
         navMeshAgent.speed = patrolSpeed;
-        navMeshAgent.destination = patrolPoints[currentPatrolIndex].position;
-    }
-
-    private void Patrol()
-    {
-        if (!navMeshAgent.pathPending && navMeshAgent.remainingDistance < 0.5f)
-        {
-            currentPatrolIndex = (currentPatrolIndex + 1) % patrolPoints.Length;
-            navMeshAgent.destination = patrolPoints[currentPatrolIndex].position;
-        }
+        int randomIndex = Random.Range(0, patrolPoints.Length);
+        navMeshAgent.destination = patrolPoints[randomIndex].position;
     }
 
     private void CheckForPlayer()
@@ -76,7 +75,19 @@ public class PatrolAndChase : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Player caught, loading GameOver scene.");
+            SceneManager.LoadScene("GameOver");
+        }
+    }
 }
+
+
+
 
 
 
