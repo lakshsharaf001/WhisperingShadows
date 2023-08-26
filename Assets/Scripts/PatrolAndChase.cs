@@ -6,10 +6,11 @@ using UnityEngine.SceneManagement;
 public class PatrolAndChase : MonoBehaviour
 {
     public Transform[] patrolPoints;
-    public float patrolSpeed = 3f;
-    public float chaseSpeed = 6f;
+    public float patrolSpeed = 10.0f;
+    public float chaseSpeed = 15.0f;
     public float detectionRadius = 10f;
     public Transform playerTransform; // Reference to the player's transform
+    public Animator monsterMove;
 
     private NavMeshAgent navMeshAgent;
     private int currentPatrolIndex = 0;
@@ -21,6 +22,7 @@ public class PatrolAndChase : MonoBehaviour
 
         // Start patrolling
         StartPatrol();
+        monsterMove.SetTrigger("Walk");
     }
 
     private void Update()
