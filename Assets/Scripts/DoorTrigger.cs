@@ -27,7 +27,7 @@ public class DoorTrigger : MonoBehaviour
 
     IEnumerator WaitaBit()
     {
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(1);
         foreach (GameObject target in targets)
         {
             target.SendMessage("Deactivate");
@@ -37,7 +37,7 @@ public class DoorTrigger : MonoBehaviour
     IEnumerator briefStop()
     {
         otherSide.SetActive(false);
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
         otherSide.SetActive(true);
     }    
 }
