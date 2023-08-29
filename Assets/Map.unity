@@ -5847,8 +5847,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffc07073884a44488af29be8b1977ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderers: []
-  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &313292730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11392,8 +11390,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffc07073884a44488af29be8b1977ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderers: []
-  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &733022104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13707,8 +13703,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffc07073884a44488af29be8b1977ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderers: []
-  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &892821775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15856,8 +15850,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 963194227}
-  xSensitivity: 10
-  ySensitivity: 10
+  xSensitivity: 20
+  ySensitivity: 20
 --- !u!114 &999672073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20516,8 +20510,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffc07073884a44488af29be8b1977ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderers: []
-  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1316093368
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21307,8 +21299,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffc07073884a44488af29be8b1977ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderers: []
-  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1339794817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21513,8 +21503,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffc07073884a44488af29be8b1977ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderers: []
-  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1353248509
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24177,8 +24165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffc07073884a44488af29be8b1977ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderers: []
-  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1482118808
 GameObject:
   m_ObjectHideFlags: 0
@@ -28644,8 +28630,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffc07073884a44488af29be8b1977ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderers: []
-  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1792268465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32852,8 +32836,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffc07073884a44488af29be8b1977ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderers: []
-  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1939526158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35698,8 +35680,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ffc07073884a44488af29be8b1977ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderers: []
-  color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &2085010046
 MonoBehaviour:
   m_ObjectHideFlags: 0

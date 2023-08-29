@@ -29,7 +29,7 @@ public class PlayerMotor : MonoBehaviour
     {
         isGrounded = controller.isGrounded;
 
-        if (Input.GetKey(KeyCode.LeftShift)) // Check if left shift key is held down
+        /*if (Input.GetKey(KeyCode.LeftShift)) // Check if left shift key is held down
         {
             sprinting = true;
             speed = 10f; // Set sprinting speed
@@ -38,7 +38,7 @@ public class PlayerMotor : MonoBehaviour
         {
             sprinting = false;
             speed = 5f; // Set normal walking speed
-        }
+        }*/
 
 
         if (lerpCrouch)

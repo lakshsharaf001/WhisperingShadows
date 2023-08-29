@@ -16,7 +16,7 @@ public class Flashlight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+       /* if (Input.GetKeyDown(KeyCode.F))
         {
             if (FlashlightActive == false)
             {
@@ -28,6 +28,22 @@ public class Flashlight : MonoBehaviour
                 FlashlightLight.gameObject.SetActive(false);
                 FlashlightActive = false;
             }
+        }*/
+    }
+
+    public void FlashlightTrigger()
+    {
+        FlashlightActive = !FlashlightActive;
+        if (FlashlightActive)
+        {
+            FlashlightLight.gameObject.SetActive(true);
+            FlashlightActive = true;
         }
+        else
+        {
+            FlashlightLight.gameObject.SetActive(false);
+            FlashlightActive = false;
+        }
+
     }
 }
